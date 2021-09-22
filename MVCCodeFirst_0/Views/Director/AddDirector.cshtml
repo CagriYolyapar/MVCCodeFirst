@@ -1,0 +1,15 @@
+﻿@model DirectorVM
+@{
+    ViewBag.Title = "AddDirector";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.TextBoxFor(x=>x.DirectorInstance.FirstName)
+    <br />
+    @Html.TextBoxFor(x=>x.DirectorInstance.LastName)
+
+    <br />
+    <button>Ekle</button>
+}
+

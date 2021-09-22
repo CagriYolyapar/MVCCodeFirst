@@ -1,0 +1,19 @@
+﻿@model DirectorVM
+@{
+    ViewBag.Title = "UpdateDirector";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(x=>x.DirectorInstance.ID)
+
+    @Html.TextBoxFor(x => x.DirectorInstance.FirstName)
+    <br />
+    @Html.TextBoxFor(x => x.DirectorInstance.LastName)
+
+    <br />
+    <button>Guncelle</button>
+}
+
+
+

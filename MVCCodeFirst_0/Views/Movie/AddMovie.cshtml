@@ -1,0 +1,20 @@
+﻿@model MovieVM
+@{
+    ViewBag.Title = "AddMovie";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.TextBoxFor(x => x.MovieInstance.Title)
+    <br />
+    @Html.TextBoxFor(x => x.MovieInstance.Summary)
+
+    <br />
+
+    <br />
+    @Html.DropDownListFor(x=>x.MovieInstance.DirectorID,new SelectList(Model.Directors,"ID","FullName"))
+
+    <button>Ekle</button>
+}
+
+

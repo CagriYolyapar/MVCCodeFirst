@@ -1,0 +1,31 @@
+﻿@model DirectorVM
+@{
+    ViewBag.Title = "DirectorList";
+}
+
+<div class="jumbotron">
+    Yonetmen eklemek icin @Html.ActionLink("tıklayınız","AddDirector")
+</div>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Isim</th>
+            <th>SoyIsim</th>
+            <th colspan="2" style="padding-left:100px">Islemler</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Director item in Model.Directors)
+        {
+        <tr>
+            <td>@item.FirstName</td>
+            <td>@item.LastName</td>
+            <td>@Html.ActionLink("Guncelle", "UpdateDirector", new { id = item.ID }, new { @class = "btn btn-warning" })</td>
+            <td>@Html.ActionLink("Sil", "DeleteDirector", new { id = item.ID }, new { @class = "btn btn-danger" })</td>
+
+        </tr>
+        }
+    </tbody>
+</table>
+

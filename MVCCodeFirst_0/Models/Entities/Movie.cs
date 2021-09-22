@@ -10,7 +10,7 @@ namespace MVCCodeFirst_0.Models.Entities
         public string Title { get; set; }
         public string Summary { get; set; }
         public int DirectorID { get; set; }
-        public int GenreID { get; set; }
+        public int? GenreID { get; set; }
 
 
         //Relational Properties
